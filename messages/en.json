@@ -8,13 +8,13 @@
   },
   "Status": {
     "openNow": "Open now",
-    "closed": "Closed",
     "closingSoon": "Closing soon",
-    "opensAt": "Opens at {time}"
+    "closed": "Closed",
+    "opensAt": "Opens {time}"
   },
   "Buttons": {
     "callHospital": "Call the hospital",
-    "directions": "Directions",
-    "callOpensAt": "Call — opens {time}"
+    "callOpensAt": "Call — opens {time}",
+    "directions": "Directions"
   }
 }
