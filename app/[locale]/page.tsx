@@ -19,7 +19,7 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
   return (
     <main>
       {/* SECTION 1 - HERO */}
-      <section className="relative overflow-hidden pt-[clamp(64px,10vw,120px)] pb-[clamp(64px,8vw,96px)] bg-[var(--color-ground)]">
+      <section className="relative overflow-hidden pt-[clamp(36px,5vw,64px)] pb-[clamp(48px,8vw,80px)] bg-[var(--color-ground)]">
         <div className="max-w-[1180px] mx-auto px-[clamp(20px,5vw,40px)] relative z-10 flex flex-col min-[900px]:flex-row gap-[clamp(40px,8vw,80px)]">
           {/* Left Col */}
           <div className="flex-1 flex flex-col gap-6 items-start relative z-20">

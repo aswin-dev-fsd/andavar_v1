@@ -19,7 +19,7 @@ export function PageHero({ eyebrow, title, lede, children, band = 'ground', clas
   if (band === 'cool') bgClass = 'bg-[var(--color-cool)]';
 
   return (
-    <section className={`relative overflow-hidden pt-[clamp(64px,10vw,120px)] pb-[clamp(64px,8vw,96px)] ${bgClass} ${className}`}>
+    <section className={`relative overflow-hidden pt-[clamp(36px,5vw,64px)] pb-[clamp(48px,8vw,80px)] ${bgClass} ${className}`}>
       {/* Background Aperture (Top Right) */}
       <div className="absolute top-0 right-0 max-w-full opacity-20 min-[900px]:opacity-60 pointer-events-none translate-x-1/4 -translate-y-1/4">
         <Aperture size={600} ringCount={5} />
