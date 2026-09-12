@@ -46,11 +46,11 @@ export function Header() {
           </Link>
 
           {/* Nav - Center (Desktop only) */}
-          <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-            <Link href="/treatments" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center">{t('treatments')}</Link>
-            <Link href="/schemes" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center">{t('schemes')}</Link>
-            <Link href="/visit-us" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center">{t('visitUs')}</Link>
-            <Link href="/about" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center">{t('about')}</Link>
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 mx-auto">
+            <Link href="/treatments" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center whitespace-nowrap">{t('treatments')}</Link>
+            <Link href="/schemes" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center whitespace-nowrap">{t('schemes')}</Link>
+            <Link href="/visit-us" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center whitespace-nowrap">{t('visitUs')}</Link>
+            <Link href="/about" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center whitespace-nowrap">{t('about')}</Link>
           </nav>
 
           {/* Right Controls */}

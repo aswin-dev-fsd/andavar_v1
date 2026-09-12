@@ -1,10 +1,9 @@
 {
   "Navigation": {
-    "treatments": "சிகிச்சைகள் (Treatments)",
-    "ourSurgeon": "எங்கள் மருத்துவர் (Our Surgeon)",
-    "schemes": "திட்டங்கள் (Schemes)",
-    "visitUs": "எங்களை சந்திக்க (Visit Us)",
-    "about": "பற்றி (About)"
+    "treatments": "சிகிச்சைகள்",
+    "schemes": "திட்டங்கள்",
+    "visitUs": "நேரில் வர",
+    "about": "எங்களை பற்றி"
   },
   "Status": {
     "openNow": "தற்போது திறந்துள்ளது",
