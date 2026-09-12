@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from '@/i18n/routing';
 import { PageHero } from '@/components/sections/LayoutSections';
+import { Breadcrumbs } from '@/components/design/Breadcrumbs';
 import { ServiceCard } from '@/components/design/ServiceCard';
 import { PrimaryButton, GhostButton } from '@/components/design/Buttons';
 
@@ -9,17 +9,19 @@ export default function TreatmentsPage() {
     <main>
       {/* SECTION 1 - HERO */}
       <PageHero
+        breadcrumbs={
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Treatments' }
+            ]} 
+          />
+        }
         title="What we treat"
         lede="Listed by what you have noticed rather than by its medical name — because nobody arrives knowing they have posterior subcapsular cataract."
         band="ground"
         className="pb-0" // The grid below is also on ground
-      >
-        <div className="absolute top-[32px] left-[clamp(20px,5vw,40px)] z-20 text-caption text-[var(--color-ink-3)] font-medium">
-          <Link href="/" className="hover:text-[var(--color-blue)] transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[var(--color-ink)]">Treatments</span>
-        </div>
-      </PageHero>
+      />
 
       {/* SECTION 2 - THE SIX */}
       <section className="bg-[var(--color-ground)] pb-[clamp(80px,12vw,140px)] pt-[clamp(32px,5vw,64px)]">

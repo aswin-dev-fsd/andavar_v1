@@ -48,10 +48,9 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="text-eyebrow text-[var(--color-dark-heading)]">Hospital</h4>
             <ul className="flex flex-col gap-3 text-caption">
-              <li><Link href="/our-surgeon" className="hover:text-white transition-colors min-h-[48px] flex items-center">{t('ourSurgeon')}</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors min-h-[48px] flex items-center">{t('about')}</Link></li>
               <li><Link href="/schemes" className="hover:text-white transition-colors min-h-[48px] flex items-center">{t('schemes')}</Link></li>
               <li><Link href="/visit-us" className="hover:text-white transition-colors min-h-[48px] flex items-center">{t('visitUs')}</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors min-h-[48px] flex items-center">{t('about')}</Link></li>
               <li><Link href="/patient-stories" className="hover:text-white transition-colors min-h-[48px] flex items-center">Patient stories</Link></li>
               <li><Link href="/eye-health" className="hover:text-white transition-colors min-h-[48px] flex items-center">Eye health</Link></li>
             </ul>

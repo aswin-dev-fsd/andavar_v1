@@ -74,7 +74,7 @@ export default async function HomePage({ params }: { params: Promise<{locale: st
             <p className="text-lede max-w-lede text-[var(--color-ink-2)]">
               At a large chain you are seen by whoever is on duty that day. Here there is one surgeon, and he will still be here at your follow-up next year.
             </p>
-            <ArrowLink href="/our-surgeon" className="mt-4">More about Dr. Raghuram</ArrowLink>
+            <ArrowLink href="/about" className="mt-4">More about our hospital</ArrowLink>
           </div>
           
           {/* Right */}

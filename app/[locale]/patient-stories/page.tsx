@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from '@/i18n/routing';
 import { PageHero } from '@/components/sections/LayoutSections';
+import { Breadcrumbs } from '@/components/design/Breadcrumbs';
 import { Card } from '@/components/design/Card';
 import { PrimaryButton } from '@/components/design/Buttons';
 import { Aperture } from '@/components/design/Aperture';
@@ -20,16 +21,18 @@ export default function PatientStoriesPage() {
     <main>
       {/* SECTION 1 - HERO */}
       <PageHero
+        breadcrumbs={
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Patient stories' }
+            ]} 
+          />
+        }
         title="What people say afterwards."
         lede="Collected from patients and families who agreed to have their words published."
         band="warm"
-      >
-        <div className="absolute top-[32px] left-[clamp(20px,5vw,40px)] z-20 text-caption text-[var(--color-ink-3)] font-medium">
-          <Link href="/" className="hover:text-[var(--color-blue)] transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[var(--color-ink)]">Patient stories</span>
-        </div>
-      </PageHero>
+      />
 
       {/* SECTION 2 - THE STORIES */}
       <section className="bg-[var(--color-ground)] py-[clamp(80px,12vw,140px)]">

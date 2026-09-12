@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from '@/i18n/routing';
 import { PageHero } from '@/components/sections/LayoutSections';
+import { Breadcrumbs } from '@/components/design/Breadcrumbs';
 import { Card } from '@/components/design/Card';
 import { Eyebrow } from '@/components/design/Eyebrow';
 import { PrimaryButton, GhostButton } from '@/components/design/Buttons';
@@ -10,17 +10,19 @@ export default function AboutPage() {
     <main>
       {/* SECTION 1 - PAGE HERO */}
       <PageHero
+        breadcrumbs={
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'About' }
+            ]} 
+          />
+        }
         title="A small hospital that has stayed in one place."
         lede="Shri Andavar Eye Care and Retina Centre has been on Palladam Road since 2013, run by the surgeon who founded it."
         band="ground"
         className="pb-0" // The story below is on ground
-      >
-        <div className="absolute top-[32px] left-[clamp(20px,5vw,40px)] z-20 text-caption text-[var(--color-ink-3)] font-medium">
-          <Link href="/" className="hover:text-[var(--color-blue)] transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[var(--color-ink)]">About</span>
-        </div>
-      </PageHero>
+      />
 
       {/* SECTION 2 - THE STORY */}
       <section className="bg-[var(--color-ground)] pb-[clamp(80px,12vw,140px)] pt-[clamp(32px,5vw,64px)]">
@@ -107,7 +109,7 @@ export default function AboutPage() {
           <h2 className="text-h2 text-[var(--color-ink)]">Come and meet the surgeon.</h2>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
             <PrimaryButton href="tel:+914259221000" className="w-full sm:w-auto">Call 04259 221 000</PrimaryButton>
-            <GhostButton href="/our-surgeon" className="w-full sm:w-auto">About Dr. Raghuram</GhostButton>
+            <GhostButton href="/visit-us" className="w-full sm:w-auto">Visit our hospital</GhostButton>
           </div>
         </div>
       </section>

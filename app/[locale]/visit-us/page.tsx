@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from '@/i18n/routing';
 import { PageHero } from '@/components/sections/LayoutSections';
+import { Breadcrumbs } from '@/components/design/Breadcrumbs';
 import { Card } from '@/components/design/Card';
 import { RowList, RowItem } from '@/components/design/RowList';
 import { Eyebrow } from '@/components/design/Eyebrow';
@@ -12,16 +12,18 @@ export default function VisitUsPage() {
     <main>
       {/* SECTION 1 - HERO */}
       <PageHero
+        breadcrumbs={
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Visit us' }
+            ]} 
+          />
+        }
         title="Opposite LMHSS School, Palladam Road."
         band="ground"
       >
-        <div className="absolute top-[32px] left-[clamp(20px,5vw,40px)] z-20 text-caption text-[var(--color-ink-3)] font-medium">
-          <Link href="/" className="hover:text-[var(--color-blue)] transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[var(--color-ink)]">Visit us</span>
-        </div>
-        
-        <div className="mt-4 mb-4">
+        <div className="mt-2 mb-2">
           <OpenNowPill />
         </div>
 

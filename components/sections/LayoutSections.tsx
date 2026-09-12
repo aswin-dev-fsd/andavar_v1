@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { Reveal } from '../design/Reveal';
 
 interface PageHeroProps {
+  breadcrumbs?: React.ReactNode;
   eyebrow?: string;
   title: string;
   lede?: string;
@@ -13,23 +14,24 @@ interface PageHeroProps {
   className?: string;
 }
 
-export function PageHero({ eyebrow, title, lede, children, band = 'ground', className = '' }: PageHeroProps) {
+export function PageHero({ breadcrumbs, eyebrow, title, lede, children, band = 'ground', className = '' }: PageHeroProps) {
   let bgClass = 'bg-[var(--color-ground)]';
   if (band === 'warm') bgClass = 'bg-[var(--color-warm)]';
   if (band === 'cool') bgClass = 'bg-[var(--color-cool)]';
 
   return (
-    <section className={`relative overflow-hidden pt-[clamp(36px,5vw,64px)] pb-[clamp(48px,8vw,80px)] ${bgClass} ${className}`}>
+    <section className={`relative overflow-hidden pt-[clamp(32px,4vw,48px)] pb-[clamp(48px,8vw,80px)] ${bgClass} ${className}`}>
       {/* Background Aperture (Top Right) */}
       <div className="absolute top-0 right-0 max-w-full opacity-20 min-[900px]:opacity-60 pointer-events-none translate-x-1/4 -translate-y-1/4">
         <Aperture size={600} ringCount={5} />
       </div>
 
       <div className="max-w-[1180px] mx-auto px-[clamp(20px,5vw,40px)] relative z-10">
-        <Reveal className="max-w-[800px] flex flex-col gap-6">
+        <Reveal className="max-w-[800px] flex flex-col gap-4">
+          {breadcrumbs && <div className="mb-2">{breadcrumbs}</div>}
           {eyebrow && <span className="text-eyebrow text-[var(--color-blue)]">{eyebrow}</span>}
           <h1 className="text-display-1 max-w-hero">{title}</h1>
-          {lede && <p className="text-lede max-w-lede text-[var(--color-ink-2)]">{lede}</p>}
+          {lede && <p className="text-lede max-w-lede text-[var(--color-ink-2)] mt-2">{lede}</p>}
           {children}
         </Reveal>
       </div>

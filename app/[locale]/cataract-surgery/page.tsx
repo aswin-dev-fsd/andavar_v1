@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from '@/i18n/routing';
 import { PageHero } from '@/components/sections/LayoutSections';
+import { Breadcrumbs } from '@/components/design/Breadcrumbs';
 import { Card } from '@/components/design/Card';
 import { RowList, RowItem } from '@/components/design/RowList';
 import { Eyebrow } from '@/components/design/Eyebrow';
@@ -12,18 +13,19 @@ export default function CataractSurgeryPage() {
     <main>
       {/* SECTION 1 - PAGE HERO */}
       <PageHero
+        breadcrumbs={
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Treatments', href: '/treatments' },
+              { label: 'Cataract surgery' }
+            ]} 
+          />
+        }
         title="Cataract surgery"
         lede="In by morning, home by evening, seeing better. The most common operation we perform, and the one people worry about most unnecessarily."
         band="ground"
-      >
-        <div className="absolute top-[32px] left-[clamp(20px,5vw,40px)] z-20 text-caption text-[var(--color-ink-3)] font-medium">
-          <Link href="/" className="hover:text-[var(--color-blue)] transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/treatments" className="hover:text-[var(--color-blue)] transition-colors">Treatments</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[var(--color-ink)]">Cataract surgery</span>
-        </div>
-      </PageHero>
+      />
 
       {/* SECTION 2 - WHAT IT ACTUALLY IS */}
       <section className="bg-[var(--color-ground)] pb-[clamp(80px,12vw,140px)]">
@@ -156,7 +158,7 @@ export default function CataractSurgeryPage() {
           <p className="text-lede">Giving up night driving, reading, or the newspaper is not something you have to accept.</p>
           <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
             <PrimaryButton href="tel:+914259221000" className="w-full sm:w-auto bg-white text-[var(--color-ink)] hover:bg-[var(--color-ground)]">Call 04259 221 000</PrimaryButton>
-            <GhostButton href="/our-surgeon" className="w-full sm:w-auto text-[var(--color-dark-heading)] border-[var(--color-dark-hairline)] hover:bg-[var(--color-dark-hairline)]">Meet the surgeon</GhostButton>
+            <GhostButton href="/visit-us" className="w-full sm:w-auto text-[var(--color-dark-heading)] border-[var(--color-dark-hairline)] hover:bg-[var(--color-dark-hairline)]">Visit the hospital</GhostButton>
           </div>
         </div>
       </section>

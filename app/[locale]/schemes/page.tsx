@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from '@/i18n/routing';
 import { PageHero } from '@/components/sections/LayoutSections';
+import { Breadcrumbs } from '@/components/design/Breadcrumbs';
 import { Card } from '@/components/design/Card';
 import { Tick, RowList, RowItem } from '@/components/design/RowList';
 import { Eyebrow } from '@/components/design/Eyebrow';
@@ -11,16 +11,18 @@ export default function SchemesPage() {
     <main>
       {/* SECTION 1 - HERO */}
       <PageHero
+        breadcrumbs={
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Schemes & insurance' }
+            ]} 
+          />
+        }
         title="Schemes and insurance"
         lede="The question people are most embarrassed to ask and most worried about. So here it is in plain language, before you have to ask anyone."
         band="cool"
-      >
-        <div className="absolute top-[32px] left-[clamp(20px,5vw,40px)] z-20 text-caption text-[var(--color-ink-3)] font-medium">
-          <Link href="/" className="hover:text-[var(--color-blue)] transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[var(--color-ink)]">Schemes & insurance</span>
-        </div>
-      </PageHero>
+      />
 
       {/* SECTION 2 - THE THREE SCHEMES */}
       <section className="bg-[var(--color-ground)] py-[clamp(80px,12vw,140px)]">
@@ -33,7 +35,11 @@ export default function SchemesPage() {
                 <h3 className="text-h3 text-[var(--color-ink)]">Chief Minister's Comprehensive Health Insurance Scheme</h3>
               </div>
               <div className="mb-4">
-                <span className="text-caption font-medium tracking-wide uppercase text-[var(--color-ink-3)] bg-[var(--color-cool)] px-2 py-1 rounded">CMCHIS • முதலமைச்சரின் விரிவான மருத்துவக் காப்பீட்டுத் திட்டம்</span>
+                <span className="inline-flex flex-wrap gap-1.5 px-3 py-1.5 rounded-lg bg-[var(--color-cool)] text-caption text-[var(--color-ink-3)] font-medium leading-relaxed">
+                  <span>CMCHIS</span>
+                  <span>•</span>
+                  <span>முதலமைச்சரின் விரிவான மருத்துவக் காப்பீட்டுத் திட்டம்</span>
+                </span>
               </div>
               <p className="text-body text-[var(--color-ink-2)] mb-8 flex-grow">
                 The Tamil Nadu government scheme. Cataract surgery and a number of other eye procedures are covered.
@@ -56,7 +62,11 @@ export default function SchemesPage() {
                 <h3 className="text-h3 text-[var(--color-ink)]">Pensioners Health Scheme</h3>
               </div>
               <div className="mb-4">
-                <span className="text-caption font-medium tracking-wide uppercase text-[var(--color-ink-3)] bg-[var(--color-cool)] px-2 py-1 rounded">For retired government employees • ஓய்வூதியதாரர்கள் மருத்துவத் திட்டம்</span>
+                <span className="inline-flex flex-wrap gap-1.5 px-3 py-1.5 rounded-lg bg-[var(--color-cool)] text-caption text-[var(--color-ink-3)] font-medium leading-relaxed">
+                  <span>For retired government employees</span>
+                  <span>•</span>
+                  <span>ஓய்வூதியதாரர்கள் மருத்துவத் திட்டம்</span>
+                </span>
               </div>
               <p className="text-body text-[var(--color-ink-2)] mb-8 flex-grow">
                 Covers retired state government employees and their dependants under the scheme's terms.
@@ -79,7 +89,11 @@ export default function SchemesPage() {
                 <h3 className="text-h3 text-[var(--color-ink)]">Star Health Insurance</h3>
               </div>
               <div className="mb-4">
-                <span className="text-caption font-medium tracking-wide uppercase text-[var(--color-ink-3)] bg-[var(--color-cool)] px-2 py-1 rounded">Private cover • தனியார் காப்பீடு</span>
+                <span className="inline-flex flex-wrap gap-1.5 px-3 py-1.5 rounded-lg bg-[var(--color-cool)] text-caption text-[var(--color-ink-3)] font-medium leading-relaxed">
+                  <span>Private cover</span>
+                  <span>•</span>
+                  <span>தனியார் காப்பீடு</span>
+                </span>
               </div>
               <p className="text-body text-[var(--color-ink-2)] mb-8 flex-grow">
                 Cashless treatment subject to your policy terms and prior approval where required.

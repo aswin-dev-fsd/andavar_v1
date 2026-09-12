@@ -39,8 +39,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       <nav className="flex flex-col p-[clamp(20px,5vw,40px)] gap-6">
         <Link href="/treatments" onClick={onClose} className="text-h3 text-[var(--color-ink)] min-h-[48px] flex items-center">{t('treatments')}</Link>
         <div className="w-full h-px bg-[var(--color-line)] opacity-50" />
-        <Link href="/our-surgeon" onClick={onClose} className="text-h3 text-[var(--color-ink)] min-h-[48px] flex items-center">{t('ourSurgeon')}</Link>
-        <div className="w-full h-px bg-[var(--color-line)] opacity-50" />
         <Link href="/schemes" onClick={onClose} className="text-h3 text-[var(--color-ink)] min-h-[48px] flex items-center">{t('schemes')}</Link>
         <div className="w-full h-px bg-[var(--color-line)] opacity-50" />
         <Link href="/visit-us" onClick={onClose} className="text-h3 text-[var(--color-ink)] min-h-[48px] flex items-center">{t('visitUs')}</Link>

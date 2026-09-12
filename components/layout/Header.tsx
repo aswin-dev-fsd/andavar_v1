@@ -48,7 +48,6 @@ export function Header() {
           {/* Nav - Center (Desktop only) */}
           <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             <Link href="/treatments" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center">{t('treatments')}</Link>
-            <Link href="/our-surgeon" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center">{t('ourSurgeon')}</Link>
             <Link href="/schemes" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center">{t('schemes')}</Link>
             <Link href="/visit-us" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center">{t('visitUs')}</Link>
             <Link href="/about" className="font-medium text-[var(--color-ink-2)] hover:text-[var(--color-blue)] transition-colors min-h-[48px] flex items-center">{t('about')}</Link>

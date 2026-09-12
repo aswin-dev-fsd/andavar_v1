@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from '@/i18n/routing';
 import { PageHero } from '@/components/sections/LayoutSections';
+import { Breadcrumbs } from '@/components/design/Breadcrumbs';
 import { Card } from '@/components/design/Card';
 import { PrimaryButton, GhostButton } from '@/components/design/Buttons';
 
@@ -9,16 +9,18 @@ export default function EyeHealthPage() {
     <main>
       {/* SECTION 1 - PAGE HERO */}
       <PageHero
+        breadcrumbs={
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Eye health' }
+            ]} 
+          />
+        }
         title="Questions people ask at the counter."
         lede="Written by Dr. Raghuram, in answer to the things patients actually ask — not a blog for the sake of having one."
         band="ground"
-      >
-        <div className="absolute top-[32px] left-[clamp(20px,5vw,40px)] z-20 text-caption text-[var(--color-ink-3)] font-medium">
-          <Link href="/" className="hover:text-[var(--color-blue)] transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <span className="text-[var(--color-ink)]">Eye health</span>
-        </div>
-      </PageHero>
+      />
 
       {/* SECTION 2 - THE SIX ANSWERS */}
       <section className="bg-[var(--color-ground)] pb-[clamp(80px,12vw,140px)]">
