@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslations } from 'next-intl';
 import { OpenNowPill } from '@/components/design/OpenNowPill';
 import { PrimaryButton, GhostButton, ArrowLink } from '@/components/design/Buttons';
 import { Aperture } from '@/components/design/Aperture';
@@ -13,7 +12,6 @@ import { ClosingCall } from '@/components/sections/LayoutSections';
 
 export default async function HomePage({ params }: { params: Promise<{locale: string}> }) {
   const { locale } = await params;
-  const tNav = useTranslations('Navigation');
   // Temporary placeholders for body text until actual translations are available
   // The spec requires EN/TA toggle for the whole UI.
   // I will use English strings here. For a full app, these would be in messages/en.json and messages/ta.json.
