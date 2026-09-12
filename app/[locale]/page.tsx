@@ -8,9 +8,11 @@ import { ServiceCard } from '@/components/design/ServiceCard';
 import { Card } from '@/components/design/Card';
 import { RowList, RowItem, Tick } from '@/components/design/RowList';
 import { FactStrip } from '@/components/design/FactStrip';
+import { Reveal } from '@/components/design/Reveal';
 import { ClosingCall } from '@/components/sections/LayoutSections';
 
-export default function HomePage() {
+export default async function HomePage({ params }: { params: Promise<{locale: string}> }) {
+  const { locale } = await params;
   const tNav = useTranslations('Navigation');
   // Temporary placeholders for body text until actual translations are available
   // The spec requires EN/TA toggle for the whole UI.
@@ -23,35 +25,35 @@ export default function HomePage() {
         <div className="max-w-[1180px] mx-auto px-[clamp(20px,5vw,40px)] relative z-10 flex flex-col min-[900px]:flex-row gap-[clamp(40px,8vw,80px)]">
           {/* Left Col */}
           <div className="flex-1 flex flex-col gap-6 items-start relative z-20">
-            <div className="animate-reveal" style={{ animationDelay: '0s' }}>
+            <Reveal delay={0}>
               <OpenNowPill />
-            </div>
+            </Reveal>
             
-            <h1 className="text-display-1 max-w-hero text-[var(--color-ink)] animate-reveal" style={{ animationDelay: '0.1s' }}>
+            <Reveal as="h1" delay={0.1} className="text-display-1 max-w-hero text-[var(--color-ink)]">
               <span lang="en">Cataract and retina care in Pollachi, by the surgeon who examines you.</span>
               {/* <span lang="ta" className="hidden">...Tamil here...</span> */}
-            </h1>
+            </Reveal>
             
-            <p className="text-lede max-w-lede text-[var(--color-ink-2)] animate-reveal" style={{ animationDelay: '0.2s' }}>
+            <Reveal as="p" delay={0.2} className="text-lede max-w-lede text-[var(--color-ink-2)]">
               Dr. A. Raghuram has looked after this district's eyes since 2013. He examines you, he operates, and he is the one who sees you at your follow-up.
-            </p>
+            </Reveal>
             
-            <div className="flex flex-col sm:flex-row gap-4 mt-2 animate-reveal w-full sm:w-auto" style={{ animationDelay: '0.3s' }}>
+            <Reveal delay={0.3} className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
               <PrimaryButton href="tel:+914259221000" className="w-full sm:w-auto">Call 04259 221 000</PrimaryButton>
               <GhostButton href="https://maps.app.goo.gl/placeholder" target="_blank" className="w-full sm:w-auto">Get directions</GhostButton>
-            </div>
+            </Reveal>
             
-            <p className="text-caption max-w-[54ch] text-[var(--color-ink-3)] mt-2 animate-reveal" style={{ animationDelay: '0.4s' }}>
+            <Reveal as="p" delay={0.4} className="text-caption max-w-[54ch] text-[var(--color-ink-3)] mt-2">
               Opposite LMHSS School, Palladam Road. Walk in, or call and we will give you a time.
-            </p>
+            </Reveal>
           </div>
 
           {/* Right Col */}
           <div className="flex-1 relative flex justify-center items-center pointer-events-none">
             {/* Desktop aperture */}
-            <div className="hidden min-[900px]:block animate-reveal" style={{ animationDelay: '0.2s' }}>
+            <Reveal delay={0.2} className="hidden min-[900px]:block">
               <Aperture size={520} ringCount={6} />
-            </div>
+            </Reveal>
             {/* Mobile aperture (background) */}
             <div className="min-[900px]:hidden absolute -top-40 -right-20 opacity-55">
               <Aperture size={520} ringCount={6} />

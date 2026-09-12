@@ -23,17 +23,18 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Trap focus could be added here for full a11y, but for now we rely on standard DOM order and ESC key.
-  
-  if (!isOpen) return null;
-
   return (
     <div 
-      className="fixed inset-0 top-[78px] z-30 bg-[var(--color-ground)] overflow-y-auto lg:hidden"
+      className={`fixed inset-0 top-[78px] z-30 bg-[var(--color-ground)] overflow-y-auto lg:hidden transition-all duration-300 ease-in-out ${
+        isOpen 
+          ? 'opacity-100 translate-y-0 pointer-events-auto' 
+          : 'opacity-0 -translate-y-4 pointer-events-none'
+      }`}
       ref={panelRef}
       role="dialog"
       aria-modal="true"
       aria-label="Mobile navigation"
+      aria-hidden={!isOpen}
     >
       <nav className="flex flex-col p-[clamp(20px,5vw,40px)] gap-6">
         <Link href="/treatments" onClick={onClose} className="text-h3 text-[var(--color-ink)] min-h-[48px] flex items-center">{t('treatments')}</Link>

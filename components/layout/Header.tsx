@@ -36,7 +36,7 @@ export function Header() {
           
           {/* Brand - Left */}
           <Link href="/" className="flex items-center gap-3 relative shrink z-50 min-h-[48px]">
-            <div className="relative w-[36px] h-[36px] overflow-hidden shrink-0 hidden sm:block">
+            <div className="relative overflow-hidden shrink-0 w-[28px] h-[28px] min-[430px]:w-[36px] min-[430px]:h-[36px]">
               <Aperture size={72} ringCount={3} className="-top-4 -left-4 opacity-70" />
             </div>
             <div className="flex flex-col shrink">

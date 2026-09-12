@@ -16,7 +16,7 @@ export function Card({ children, variant = 'default', className = '', radius = '
 
   return (
     <div 
-      className={`border border-[var(--color-line)] ${bgClass} ${radiusClass} shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] hover:-translate-y-[5px] transition-all duration-350 p-[clamp(26px,3.4vw,38px)] ${className}`}
+      className={`border border-[var(--color-line)] ${bgClass} ${radiusClass} shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] hover:-translate-y-[5px] transition-all duration-[350ms] p-[clamp(26px,3.4vw,38px)] ${className}`}
     >
       {children}
     </div>

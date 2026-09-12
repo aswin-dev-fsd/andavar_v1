@@ -16,7 +16,7 @@ export function ServiceCard({ symptom, title, description, href, linkText, class
   return (
     <Card className={`group relative overflow-hidden flex flex-col h-full ${className}`}>
       {/* Decorative Aperture */}
-      <div className="absolute -top-12 -right-12 transition-transform duration-350 group-hover:scale-110 group-hover:rotate-6">
+      <div className="absolute -top-12 -right-12 transition-transform duration-[350ms] group-hover:scale-110 group-hover:rotate-6">
         <Aperture size={160} ringCount={3} />
       </div>
 
