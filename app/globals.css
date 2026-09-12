@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@import "../public/fonts/anek-tamil.css";
+
+@theme {
+  --font-sans: "Anek Tamil", sans-serif;
+
+  /* Colors */
+  --color-ground: #FBF8F3;
+  --color-warm: #F5EFE5;
+  --color-cool: #EFF3F5;
+  --color-card: #FFFFFF;
+
+  --color-ink: #151A1C;
+  --color-ink-2: #3E4A50;
+  --color-ink-3: #6B7A81;
+
+  --color-blue: #0B5C8A;
+  --color-blue-deep: #083F5F;
+  --color-blue-wash: #E3EEF5;
+
+  --color-amber: #B8722C;
+  --color-amber-wash: #F6E8D6;
+
+  --color-green: #2E7D5B;
+  --color-green-wash: #E1F0E8;
+
+  --color-line: #E2DACE;
+  --color-line-cool: #D8E0E4;
+
+  /* Dark Sections */
+  --color-dark-bg: #151A1C;
+  --color-dark-heading: #FFFFFF;
+  --color-dark-body: #C9D3D7;
+  --color-dark-muted: #8496A0;
+  --color-dark-eyebrow: #7FBBDC;
+  --color-dark-hairline: #2A3237;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-ink bg-ground text-[18px] leading-[1.66] antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-balance;
+  }
+
+  .text-display-1 {
+    font-size: clamp(38px, 5.4vw, 63px);
+    font-weight: 700;
+  }
+
+  .text-display-2 {
+    font-size: clamp(32px, 5.2vw, 54px);
+    font-weight: 700;
+  }
+
+  .text-h2 {
+    font-size: clamp(28px, 4.2vw, 44px);
+    font-weight: 700;
+  }
+
+  .text-h3 {
+    font-size: clamp(21px, 2.5vw, 27px);
+    font-weight: 700;
+  }
+
+  .text-h4 {
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .text-lede {
+    font-size: clamp(19px, 2.1vw, 23px);
+    font-weight: 400;
+  }
+
+  .text-small {
+    font-size: 16.5px;
+  }
+
+  .text-caption {
+    font-size: 15px;
+  }
+
+  .text-eyebrow {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+@layer utilities {
+  .max-w-body {
+    max-width: 64ch;
+  }
+
+  .max-w-lede {
+    max-width: 46ch;
+  }
+  
+  .max-w-hero {
+    max-width: 15ch;
+  }
+}
+
+/* Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-reveal {
+    animation: reveal 0.85s cubic-bezier(0.22, 0.68, 0.28, 1) forwards;
+    opacity: 0;
+  }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      filter: blur(9px);
+      transform: translateY(22px) scale(0.985);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-pulse-ring {
+    animation: pulse-ring 2.6s infinite;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+}
+
+/* Fallback for animation if JS disabled (IntersectionObserver won't trigger) */
+.no-js .animate-reveal {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: none !important;
+}

@@ -1,0 +1,1 @@
+export default function Page() { return <main><h1>cataract-surgery</h1></main>; }

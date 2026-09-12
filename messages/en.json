@@ -1,0 +1,20 @@
+{
+  "Navigation": {
+    "treatments": "Treatments",
+    "ourSurgeon": "Our Surgeon",
+    "schemes": "Schemes",
+    "visitUs": "Visit Us",
+    "about": "About"
+  },
+  "Status": {
+    "openNow": "Open now",
+    "closed": "Closed",
+    "closingSoon": "Closing soon",
+    "opensAt": "Opens at {time}"
+  },
+  "Buttons": {
+    "callHospital": "Call the hospital",
+    "directions": "Directions",
+    "callOpensAt": "Call — opens {time}"
+  }
+}
